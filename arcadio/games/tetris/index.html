@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris - Arcade Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="mobileOverlay" class="mobile-overlay">
+        <div class="mobile-message">
+            <i class="fas fa-th-large"></i>
+            <h2>PC Only Game</h2>
+            <p>This game is only available on desktop computers.</p>
+            <p>Please open it on your PC to play.</p>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="ranking-bar">
+            <div class="rank-item">
+                <i class="fas fa-crown"></i>
+                <span class="wallet">0x000...000</span>
+                <span class="score">0</span>
+            </div>
+            <div class="rank-item">
+                <i class="fas fa-medal"></i>
+                <span class="wallet">0x000...000</span>
+                <span class="score">0</span>
+            </div>
+            <div class="rank-item">
+                <i class="fas fa-trophy"></i>
+                <span class="wallet">0x000...000</span>
+                <span class="score">0</span>
+            </div>
+            <div class="rank-item">
+                <i class="fas fa-star"></i>
+                <span class="wallet">0x000...000</span>
+                <span class="score">0</span>
+            </div>
+            <div class="rank-item">
+                <i class="fas fa-award"></i>
+                <span class="wallet">0x000...000</span>
+                <span class="score">0</span>
+            </div>
+        </div>
+
+        <button id="walletButton" class="wallet-button" onclick="walletConnection.connectWallet()">Connect Wallet</button>
+        <a href="../../index.html" class="back-button">← Back</a>
+        
+        <div class="game-wrapper">
+            <div class="side-panel">
+                <div class="score-container">
+                    <div class="score">Score: <span id="score">0</span></div>
+                    <div class="high-score">High Score: <span id="highScore">0</span></div>
+                </div>
+                
+                <div class="controls">
+                    <h3>Controls</h3>
+                    <div class="control-row">
+                        <button class="control-btn" data-key="KeyW">W</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="control-btn" data-key="KeyA">A</button>
+                        <button class="control-btn" data-key="KeyD">D</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <div id="game-board"></div>
+                <div class="overlay" id="overlay">
+                    <div class="menu">
+                        <h1>TETRIS</h1>
+                        <button id="startGame" class="btn">Start Game</button>
+                        <div class="instructions">
+                            <p>Use WAD keys to control the pieces</p>
+                            <p>W - Rotate</p>
+                            <p>A/D - Move left/right</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continue-overlay" id="continueOverlay">
+                    <div class="menu">
+                        <h1>GAME OVER</h1>
+                        <div class="final-score">Score: <span id="finalScore">0</span></div>
+                        <button id="continueGame" class="btn">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="gameMusic" loop>
+        <source src="tetris.mp3" type="audio/mpeg">
+    </audio>
+    <script src="wallet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

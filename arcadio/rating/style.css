@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
+}
+
+header {
+    padding: 20px 0 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 20px 0 5px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 4px;
+}
+
+.scroll-wrapper {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 100%);
+}
+
+.leaderboards-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: calc(100% - 40px);
+}
+
+.leaderboard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: calc(16.666% - 10px);
+    min-width: 200px;
+}
+
+.game-header {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.game-header i {
+    font-size: 1.2rem;
+}
+
+.game-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.tetris-header {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
+
+.snake-header {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.racing-header {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.minesweeper-header {
+    background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+}
+
+.puzzle-header {
+    background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+}
+
+.arcade-header {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a8a6ff 100%);
+}
+
+.player-list {
+    padding: 10px;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.player-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.player-rank {
+    width: 25px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.player-name {
+    flex: 1;
+    margin: 0 5px;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-score {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    min-width: 60px;
+    text-align: right;
+}
+
+/* Empty state styling */
+.player-item .player-name:empty::before,
+.player-item .player-score:empty::before,
+.player-item .player-name:contains("-")::before,
+.player-item .player-score:contains("-")::before {
+    content: "-";
+    color: rgba(255, 255, 255, 0.4);
+}

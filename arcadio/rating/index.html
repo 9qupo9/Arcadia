@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Global - Arcadia Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add ethers.js before our scripts -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js" type="application/javascript"></script>
+    <script src="contracts.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-button">Back to Games</a>
+        <header>
+            <h1>Global Rankings</h1>
+        </header>
+        <div class="scroll-wrapper">
+            <div class="leaderboards-container">
+                <div class="leaderboard">
+                    <div class="game-header tetris-header">
+                        <i class="fas fa-th-large"></i>
+                        <h2>Tetris</h2>
+                    </div>
+                    <div class="player-list" id="tetris-leaderboard"></div>
+                </div>
+
+                <div class="leaderboard">
+                    <div class="game-header snake-header">
+                        <i class="fas fa-apple-alt"></i>
+                        <h2>Snake</h2>
+                    </div>
+                    <div class="player-list" id="snake-leaderboard"></div>
+                </div>
+
+                <div class="leaderboard">
+                    <div class="game-header racing-header">
+                        <i class="fas fa-car"></i>
+                        <h2>Pixel Racer</h2>
+                    </div>
+                    <div class="player-list" id="racing-leaderboard"></div>
+                </div>
+
+                <div class="leaderboard">
+                    <div class="game-header minesweeper-header">
+                        <i class="fas fa-bomb"></i>
+                        <h2>Minesweeper</h2>
+                    </div>
+                    <div class="player-list" id="minesweeper-leaderboard"></div>
+                </div>
+
+                <div class="leaderboard">
+                    <div class="game-header puzzle-header">
+                        <i class="fas fa-circle"> </i>
+
+                        <h2>Arcanoid</h2>
+                    </div>
+                    <div class="player-list" id="puzzle-leaderboard"></div>
+                </div>
+
+                <div class="leaderboard">
+                    <div class="game-header arcade-header">
+                        <i class="fas fa-gamepad"></i>
+                        <h2>Arcade</h2>
+                    </div>
+                    <div class="player-list" id="arcade-leaderboard"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

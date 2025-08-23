@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper - Arcade Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="mobileOverlay" class="mobile-overlay">
+        <div class="mobile-message">
+            <i class="fas fa-bomb"></i>
+            <h2>PC Only Game</h2>
+            <p>This game is only available on desktop computers.</p>
+            <p>Please open it on your PC to play.</p>
+        </div>
+    </div>
+    <div class="page-container">
+        <button id="walletButton" class="wallet-button" onclick="walletConnection.connectWallet()">Connect Wallet</button>
+        <a href="../../index.html" class="back-button">← Back</a>
+        
+        <div class="container">
+            <div class="game-content">
+                <div id="game-board"></div>
+                <div>
+                    <div class="game-info">
+                        <div class="mines"><i class="fas fa-bomb"></i>Mines: <span id="mines">50</span></div>
+                        <div class="time"><i class="fas fa-clock"></i>Time: <span id="time">60</span> s</div>
+                        <div class="score"><i class="fas fa-star"></i>Score: <span id="score">0</span></div>
+                        <div class="high-score"><i class="fas fa-trophy"></i>High Score: <span id="highScore">0</span></div>
+                    </div>
+                    <div class="controls-info">
+                        <h4>Game Rules:</h4>
+                        <ul>
+                            <li>Left Click - Reveal cell</li>
+                            <li>Right Click - Place/Remove flag</li>
+                        </ul>
+                        <h4>Scoring :</h4>
+                        <ul>
+                            <li>Revealing safe cell: +10 points</li>
+                            <li>Correct flag on mine: +50 points</li>
+                            <li>Hitting a mine: Game Over!</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="overlay" id="overlay">
+                    <div class="menu">
+                        <h1></h1>
+                        <h1>MINES</h1>
+                        <button id="startGame" class="btn">Start Game</button>
+                        <div class="instructions">
+                            <p>Left Click - Reveal cell</p>
+                            <p>Right Click - Place/Remove flag</p>
+                            <p>Clear all mines to win!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay" id="gameOverOverlay" style="display: none;">
+                    <div class="menu">
+                        <h1>GAME OVER</h1>
+                        <button id="newGame" class="btn">New Game</button>
+                        <div class="instructions">
+                            <p>Your score: <span id="finalScore">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="ranking-bar">
+                    <div class="rank-item">
+                        <i class="fas fa-crown"></i>
+                        <span class="wallet">0x000...000</span>
+                        <span class="score">0</span>
+                    </div>
+                    <div class="rank-item">
+                        <i class="fas fa-medal"></i>
+                        <span class="wallet">0x000...000</span>
+                        <span class="score">0</span>
+                    </div>
+                    <div class="rank-item">
+                        <i class="fas fa-trophy"></i>
+                        <span class="wallet">0x000...000</span>
+                        <span class="score">0</span>
+                    </div>
+                    <div class="rank-item">
+                        <i class="fas fa-star"></i>
+                        <span class="wallet">0x000...000</span>
+                        <span class="score">0</span>
+                    </div>
+                    <div class="rank-item">
+                        <i class="fas fa-award"></i>
+                        <span class="wallet">0x000...000</span>
+                        <span class="score">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="gameMusic" loop>
+        <source src="game.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="winSound">
+        <source src="win.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="loseSound">
+        <source src="lose.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound">
+        <source src="click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="knopSound">
+        <source src="knop.mp3" type="audio/mpeg">
+    </audio>
+    <script src="wallet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadia Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        window.onload = function() {
+            if (isMobileDevice()) {
+                // Open the PC.html modal
+                window.open('PC/PC.html', '_blank');
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>ARCADIO</h1>
+        <div class="services-section">
+            <div class="game-card rating-card" onclick="location.href='rating/index.html'">
+                <div class="game-icon rating-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="card-content">
+                    <h2>Rating Global</h2>
+                    <p>Explore the global ratings of games</p>
+                </div>
+            </div>
+            <div class="game-card room-card" onclick="location.href='room/index.html'">
+                <div class="game-icon room-icon">
+                    <i class="fas fa-door-open"></i>
+                </div>
+                <div class="card-content">
+                    <h2>Room</h2>
+                    <p>Enter the virtual room space</p>
+                </div>
+            </div>
+        </div>
+        <div class="games-grid">
+            <div class="game-card" onclick="location.href='games/tetris/index.html'">
+                <div class="game-icon tetris-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <h2>Tetris</h2>
+                <p>Classic block-stacking puzzle game</p>
+                <div class="game-controls">Controls: Arrow keys</div>
+            </div>
+            
+            <div class="game-card" onclick="location.href='games/snake/index.html'">
+                <div class="game-icon snake-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h2>Snake</h2>
+                <p>Classic snake game with power-ups</p>
+                <div class="game-controls">Controls: WASD keys</div>
+            </div>
+            
+            <div class="game-card" onclick="location.href='games/care/index.html'">
+                <div class="game-icon racing-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h2>Pixel Racer</h2>
+                <p>Fast-paced racing action game</p>
+                <div class="game-controls">Controls: A/D keys</div>
+            </div>
+
+            <div class="game-card" onclick="location.href='games/minesweeper/index.html'">
+                <div class="game-icon minesweeper-icon">
+                    <i class="fas fa-bomb"></i>
+                </div>
+                <h2>Minesweeper</h2>
+                <p>Classic mine-finding puzzle game</p>
+                <div class="game-controls">Controls: Mouse clicks</div>
+            </div>
+
+            <div class="game-card" onclick="location.href='games/arcanoid/index.html'">
+                <div class="game-icon arcanoid-icon">
+                    <i class="fas fa-circle"></i> <!-- Заменяем на иконку шарика -->
+                </div>
+                <h2>Arcanoid</h2>
+                <p>Classic Arkanoid game</p>
+                <div class="game-controls">Controls: A/D keys</div>
+            </div>
+
+            <div class="game-card" onclick="location.href='games/pacman/index.html'">
+                <div class="game-icon pacman-icon">
+                    <i class="fas fa-ghost"></i> 
+                </div>
+                <h2>Pacman</h2>
+                <p>Classic Pacman game</p>
+                <div class="game-controls">Controls: WASD keys</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>All games are optimized for desktop play</p>
+        </footer>
+    </div>
+</body>
+</html>
